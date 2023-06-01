@@ -25,6 +25,6 @@ let RedisModule = RedisModule_1 = class RedisModule {
     }
 };
 RedisModule = RedisModule_1 = __decorate([
-    common_1.Module({})
+    (0, common_1.Module)({})
 ], RedisModule);
 exports.RedisModule = RedisModule;

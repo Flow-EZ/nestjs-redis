@@ -34,8 +34,8 @@ let RedisService = class RedisService {
     }
 };
 RedisService = __decorate([
-    common_1.Injectable(),
-    __param(0, common_1.Inject(redis_constants_1.REDIS_CLIENT)),
+    (0, common_1.Injectable)(),
+    __param(0, (0, common_1.Inject)(redis_constants_1.REDIS_CLIENT)),
     __metadata("design:paramtypes", [Object])
 ], RedisService);
 exports.RedisService = RedisService;
