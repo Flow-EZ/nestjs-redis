@@ -1,6 +1,6 @@
 {
   "name": "@flowez/nestjs-redis",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.3",
   "description": "Nest - modern, fast, powerful node.js web framework (@ioredis)",
   "author": "FLOW-EZ TEAM",
   "license": "MIT",
