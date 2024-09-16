@@ -9,10 +9,10 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": false,
-    "outDir": "./dist",
-    "rootDir": "./lib",
+    "outDir": "./lib",
+    "rootDir": "./src",
     "skipLibCheck": true
   },
-  "include": ["lib/**/*", "../index.ts"],
+  "include": ["src/**/*", "../index.ts"],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }

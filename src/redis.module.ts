@@ -6,11 +6,11 @@ import { RedisCoreModule } from './redis-core.module';
 @Module({})
 export class RedisModule {
   static register(
-    options: RedisModuleOptions | RedisModuleOptions[],
+    options: RedisModuleOptions | RedisModuleOptions[]
   ): DynamicModule {
     return {
       module: RedisModule,
-      imports: [RedisCoreModule.register(options)],
+      imports: [RedisCoreModule.forRoot(options)],
     };
   }
 

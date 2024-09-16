@@ -28,7 +28,7 @@ export class RedisCoreModule implements OnModuleDestroy {
     private readonly redisClient: RedisClient,
   ) {}
 
-  static register(
+  static forRoot(
     options: RedisModuleOptions | RedisModuleOptions[],
   ): DynamicModule {
     return {

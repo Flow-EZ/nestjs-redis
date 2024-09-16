@@ -1,8 +1,7 @@
-import IORedis, { Redis} from 'ioredis';
-import { v4 as uuidv4 } from 'uuid';
+import IORedis, { Redis } from 'ioredis';
 import { Provider } from '@nestjs/common';
 
-import { REDIS_CLIENT, REDIS_MODULE_OPTIONS } from './redis.constants';
+import { REDIS_CLIENT, REDIS_MODULE_OPTIONS, DEFAULT_REDIS_CLIENT } from './redis.constants';
 import { RedisModuleAsyncOptions, RedisModuleOptions } from './redis.interface';
 
 export class RedisClientError extends Error {}
@@ -25,7 +24,7 @@ export const createClient = (): Provider => ({
   provide: REDIS_CLIENT,
   useFactory: async (options: RedisModuleOptions | RedisModuleOptions[]): Promise<RedisClient> => {
     const clients = new Map<string, Redis>();
-    let defaultKey = uuidv4();
+    let defaultKey = DEFAULT_REDIS_CLIENT;
 
     if (Array.isArray(options)) {
       await Promise.all(
